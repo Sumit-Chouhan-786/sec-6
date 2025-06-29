@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 *{
     text-decoration: none !important;
+    font-family: 'Roboto','sans-serif';
 }
 
 /* -----------------loader------------------ */
@@ -547,6 +549,10 @@ button.navbar-toggler:focus {
       object-fit: cover;
     }
 
+    .review_card{
+      height: 500px;
+    }
+
 .footer_link{
   transition: all 300ms linear;
 }
@@ -569,7 +575,7 @@ button.navbar-toggler:focus {
     }
         @media (max-width: 768px) {
             .hero-section {
-                padding: 20px 0 60px;
+                padding: 20px 0 40px;
                 text-align: center;
             }
             
@@ -594,5 +600,9 @@ button.navbar-toggler:focus {
  .carousel-item{
       height: 280px !important;
     
+    }
+
+    .review_card{
+      height: 400px;
     }
  }
