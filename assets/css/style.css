@@ -223,13 +223,6 @@ button.navbar-toggler:focus {
     box-shadow: none !important;
 }
 
-   :root {
-            --primary-color: #0d6efd;
-            --primary-hover: #0b5ed7;
-            --secondary-color: #6c757d;
-            --light-bg: #f8f9fa;
-            --dark-color: #212529;
-        }
         
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -305,25 +298,279 @@ button.navbar-toggler:focus {
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         }
 
-
-   .services_card {
-  background: rgba(0, 100, 255, 0.2); /* translucent blue */
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 16px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
-  transform-style: preserve-3d;
-}
-
 /* 3D Hover Effect */
 .services_card:hover {
   transform: rotateY(20deg) rotateX(4deg);
   box-shadow: 0 20px 45px rgba(0, 0, 0, 0.3);
+} 
+
+
+/* Base card style for 3D effect */
+/* Enhanced base style */
+.image-slider {
+  position: relative;
+  width: 100%;
+  height: 100%;
 }
 
-        
+.slider-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  border-radius: 12px;
+  z-index: 1;
+}
+
+.slider-img.active {
+  opacity: 1;
+  z-index: 2;
+}
+
+.btn {
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 14px;
+    text-decoration: none;
+    transition: all 0.3s;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: #128acd;
+    color: #000;
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: #128acd;
+    border: 1px solid #128acd;
+}
+
+.btn:hover {
+    transform: scale(1.05) translateZ(5px);
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
+}
+.card-3d {
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.card-3d:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
+}
+ .card-3d {
+      perspective: 1000px;
+    }
+
+    .card-inner {
+      position: relative;
+      width: 100%;
+      height: 400px;
+      transition: transform 0.8s;
+      transform-style: preserve-3d;
+    }
+
+    .card-3d:hover .card-inner {
+      transform: rotateY(180deg);
+    }
+
+    .card-front, .card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    }
+
+    .card-front {
+      background-color: #fff;
+      z-index: 2;
+    }
+
+    .card-front img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .card-back {
+      background-color: #111;
+      color: #fff;
+      padding: 20px;
+      transform: rotateY(180deg);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .card-back h5 {
+      color:#128acd;
+    }
+
+    .card-back a {
+      color: #128acd;
+      text-decoration: none;
+      margin-top: 10px;
+    }
+
+    .card-back a:hover {
+      text-decoration: underline;
+    }
+.card-container {
+      perspective: 1000px;
+    }
+
+    .flip-card {
+      position: relative;
+      width: 100%;
+      height: 350px;
+      transition: transform 0.8s;
+      transform-style: preserve-3d;
+    }
+
+    .card-container:hover .flip-card {
+      transform: rotateY(180deg);
+    }
+
+    .flip-front, .flip-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      border-radius: 15px;
+      overflow: hidden;
+      transition: border 0.3s ease;
+    }
+
+    .flip-front img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .flip-back {
+      background-color: #0f0f0f;
+      color: #fff;
+      transform: rotateY(180deg);
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+      border: 3px solid transparent;
+      animation: glow-border 2s infinite ease-in-out;
+    }
+   .card-3d-container {
+      perspective: 1000px;
+    }
+
+    .card-3d {
+      position: relative;
+      width: 100%;
+      height: 200px;
+      transition: transform 0.8s;
+      transform-style: preserve-3d;
+    }
+
+    .card-3d-container:hover .card-3d {
+      transform: rotateY(180deg);
+    }
+
+    .card-front, .card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border-radius: 12px;
+      backface-visibility: hidden;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .card-front {
+      background-color: #ffffff;
+      z-index: 2;
+    }
+
+    .card-back {
+      background-color: #f8f9fa;
+      transform: rotateY(180deg);
+    }
+
+    .icon {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .text-muted {
+      font-size: 0.95rem;
+    }
+    .form-container {
+      max-width: 400px;
+      margin: 50px auto;
+    }
+    
+    @keyframes glow-border {
+      0% {
+        border-color: #128acd;
+        box-shadow: 0 0 5px #128acd;
+      }
+      50% {
+        border-color: #ffffff;
+        box-shadow: 0 0 15px #ffffff;
+      }
+      100% {
+        border-color: #128acd;
+        box-shadow: 0 0 5px #128acd;
+      }
+    }
+.typing-demo {
+  animation: typing 10s steps(22), blink .5s step-end infinite alternate;
+  overflow: hidden;
+  font-size: 3em;
+}
+   .form-container {
+      max-width: 400px;
+      margin: 50px auto;
+    }
+
+
+    .carousel-item{
+      height: 400px !important;
+      object-fit: cover;
+    }
+
+    .common_para{
+      background-color: var(--secondary-color);
+    }
+
+
+@keyframes typing {
+  from {
+    width: 0
+  }
+}
+    
+@keyframes blink {
+  50% {
+    border-color: transparent
+  }
+}
+    .flip-back h5 {
+      color: #128acd;
+      font-weight: 700;
+    }
         @media (max-width: 768px) {
             .hero-section {
                 padding: 20px 0 60px;
@@ -341,4 +588,18 @@ button.navbar-toggler:focus {
                 margin-top: 20px;
                 width: 100%;
             }
+             .carousel-item{
+      height: 320px !important;
+    }
         }
+
+
+ @media (max-width: 576px) {
+        .typing-demo {
+    font-size: 34px !important;
+}
+ .carousel-item{
+      height: 280px !important;
+    
+    }
+ }

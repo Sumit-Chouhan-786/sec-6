@@ -87,4 +87,72 @@ setTimeout(() => {
             this.reset();
         });
 
+  // ===============================================     hero slider
+
+
+  const images = document.querySelectorAll('.slider-img');
+  let index = 0;
+
+  setInterval(() => {
+    images[index].classList.remove('active');
+    index = (index + 1) % images.length;
+    images[index].classList.add('active');
+  }, 4000); // 4 seconds per image
+
+
+const card = document.querySelector('.card');
+const container = document.querySelector('.card-container');
+const cardImage = document.querySelector('.card-image');
+
+let isMouseOver = false;
+let rotateX = 0;
+let rotateY = 0;
+
+function lerp(start, end, t) {
+    return start * (1 - t) + end * t;
+}
+
+function clamp(value, min, max) {
+    return Math.min(Math.max(value, min), max);
+}
+
+function updateCardTransform() {
+    const transformString = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+    card.style.transform = transformString;
+}
+
+
+//=======================accounts code
+  // Sign Up
+  document.getElementById("signup").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    const name = document.getElementById("signupName").value;
+    const email = document.getElementById("signupEmail").value;
+    const password = document.getElementById("signupPassword").value;
+
+    // Save to localStorage
+    localStorage.setItem("user", JSON.stringify({ name, email, password }));
+
+    document.getElementById("signupMsg").innerHTML = `<span class="text-success">Signup successful! You can now log in.</span>`;
+    this.reset();
+  });
+
+  // Login
+  document.getElementById("login").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    const email = document.getElementById("loginEmail").value;
+    const password = document.getElementById("loginPassword").value;
+
+    const user = JSON.parse(localStorage.getItem("user"));
+
+    if (user && user.email === email && user.password === password) {
+      document.getElementById("loginMsg").innerHTML = `<span class="text-success">Login successful! Welcome, ${user.name}.</span>`;
+    } else {
+      document.getElementById("loginMsg").innerHTML = `<span class="text-danger">Invalid email or password.</span>`;
+    }
+
+    this.reset();
+  });
 
