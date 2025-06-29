@@ -1,24 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>EstatePro - Premium Real Estate Services</title>
-  <link rel="icon" type="image/x-icon" href="./assets/images/logo.webp">
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
-  <!-- Font Awesome -->
-  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EstatePro - Premium Real Estate Services</title>
+      <link rel="icon" type="image/x-icon" href="./assets/images/logo.webp">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="./assets/css/style.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+   <link rel="stylesheet" href="./assets/css/style.css">
 </head>
-
 <body>
-  <!-- loader -->
+    <!-- loader -->
+  <!-- Loader -->
   <div class="loader d-none" id="loader">
     <div class="loader-inner">
       <div class="loader-line-wrap">
@@ -41,7 +38,7 @@
   <!-- Navigation -->
   <header class="position-sticky top-0 bg-white">
     <nav class="navbar navbar-expand-lg navbar-light container">
-      <a href="#"><img height="70" width="70" class="w-100" src='./assets/images/logo.webp' alt="logo"></a>
+      <a href="#"><img height="80" width="80" class="w-100" src='./assets/images/logo.webp' alt="logo"></a>
       <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain" aria-controls="navbarMain" aria-expanded="false" aria-label="Toggle navigation">
         <span class="toggler-icon"></span>
       </button>
@@ -50,18 +47,18 @@
         <!-- Right Menu -->
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0 d-flex gap-sm-3 mt-3 mt-sm-0">
           <li class="nav-item dropdown">
-            <a aria-label="resources" class="nav-link" href="#" role="button">
+            <a aria-label="resources" class="nav-link" href="#" role="button" data-bs-toggle="dropdown">
               Home
             </a>
 
           </li>
           <li class="nav-item dropdown">
-            <a aria-label="services" class="nav-link" href="#" role="button">
+            <a aria-label="services" class="nav-link" href="#" role="button" data-bs-toggle="dropdown">
               Services
             </a>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link" href="#" role="button">
+            <a class="nav-link" href="#" role="button" data-bs-toggle="dropdown">
               About us
             </a>
           </li>
@@ -70,389 +67,61 @@
     </nav>
   </header>
 
-  <!-- Hero Section -->
-  <section id="home" class="hero-section">
-    <div class="container">
-      <div class="row align-items-center flex-column-reverse flex-lg-row">
-        <div class="col-lg-6">
-          <h1 class="fw-bold mb-sm-4 mb-3 mt-lg-0 mt-sm-4 mt-3">Find Your Dream <span class="text-primary">Home</span></h1>
-          <p class="lead mb-sm-4 mb-3 text-muted">Discover the perfect property that matches your lifestyle with our expert real estate services.</p>
-          <div class="d-flex flex-column flex-lg-row flex-md-row gap-3">
-            <a href="#contact" class="btn btn-primary btn-lg px-4 fw-semibold text-white">Get Started</a>
-            <button class="btn btn-outline-primary btn-lg px-4">Browse Properties</button>
-          </div>
-        </div>
-        <div class="col-lg-6 hero-img-container position-relative">
-          <!-- Carousel Start -->
-          <div id="heroImageSlider" class="carousel slide position-relative rounded-3 shadow" data-bs-ride="carousel" data-bs-interval="3000">
-            <div class="carousel-inner rounded-3">
-              <!-- Slide 1 -->
-              <div class="carousel-item active">
-                <div class="opacity-10 position-absolute top-0 start-0 w-100 h-100 rounded-3">
-                  <img class="w-100 h-100 rounded-3" src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="">
-                </div>
-              </div>
+<div class="form-container bg-white p-4 rounded shadow">
+  <!-- Tabs -->
+  <ul class="nav nav-pills mb-3 justify-content-center" id="formTabs" role="tablist">
+    <li class="nav-item" role="presentation">
+      <button class="nav-link active" id="login-tab" data-bs-toggle="pill" data-bs-target="#loginForm" type="button" role="tab">Login</button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" id="signup-tab" data-bs-toggle="pill" data-bs-target="#signupForm" type="button" role="tab">Sign Up</button>
+    </li>
+  </ul>
 
-              <!-- Slide 2 -->
-              <div class="carousel-item">
-                <div class="opacity-10 position-absolute top-0 start-0 w-100 h-100 rounded-3">
-                  <img class="w-100 h-100 rounded-3" src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&amp;fit=crop&amp;w=800&amp;q=80" alt="">
-                </div>
-              </div>
-
-              <!-- Slide 3 -->
-              <div class="carousel-item">
-                <div class="opacity-10 position-absolute top-0 start-0 w-100 h-100 rounded-3">
-                  <img class="w-100 h-100 rounded-3" src="https://images.unsplash.com/photo-1665150923162-4a55a591da94?q=80&w=736&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
-                </div>
-              </div>
-
-              <!-- Add more slides as needed -->
-            </div>
-          </div>
-          <!-- Carousel End -->
-          <!-- Property Stats -->
-          <div class="property-stat d-none d-lg-block mt-3">
-            <div class="d-flex align-items-center">
-              <div class="feature-icon me-3">
-                <i class="fas fa-home text-primary fs-4"></i>
-              </div>
-              <div>
-                <p class="mb-0 text-muted">Properties Listed</p>
-                <h4 class="mb-0 fw-bold">1,250+</h4>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+<!-- Tab Content -->
+<div class="tab-content" id="formTabsContent">
+  <!-- Login Form -->
+<div class="tab-pane fade show active" id="loginForm" role="tabpanel">
+  <h4 class="text-center my-3">Login</h4>
+  <div>
+    <div class="mb-3">
+      <label for="loginEmail" class="form-label">Email</label>
+      <input type="email" class="form-control" id="loginEmail" required>
     </div>
-  </section>
-
-  <!-- Services Section -->
-  <section id="services" class="py-4 py-lg-5 bg-dark">
-    <div class="container py-2">
-      <h2 class="display-5 fw-bold text-white text-center mb-4 py-3">Services</h2>
-      <div class="row g-4">
-
-        <!-- Card 1 -->
-        <div class="col-md-6 col-lg-4">
-          <div class="card-container">
-            <div class="flip-card">
-              <div class="flip-front">
-                <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80" alt="Dream Home">
-              </div>
-              <div class="flip-back">
-                <h5>Your Dream Home</h5>
-                <p>Explore a wide range of homes in top locations at the best prices.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Card 2 -->
-        <div class="col-md-6 col-lg-4">
-          <div class="card-container">
-            <div class="flip-card">
-              <div class="flip-front">
-                <img src="https://images.unsplash.com/photo-1599423300746-b62533397364?auto=format&fit=crop&w=800&q=80" alt="Invest">
-              </div>
-              <div class="flip-back">
-                <h5>Invest in Property</h5>
-                <p>Secure your future with top-performing real estate investment opportunities.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Card 3 -->
-        <div class="col-md-6 col-lg-4">
-          <div class="card-container">
-            <div class="flip-card">
-              <div class="flip-front">
-                <img src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&fit=crop&w=800&q=80" alt="Commercial">
-              </div>
-              <div class="flip-back">
-                <h5>Commercial Spaces</h5>
-                <p>Find office spaces, showrooms, and more to grow your business.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
+    <div class="my-3">
+      <label for="loginPassword" class="form-label">Password</label>
+      <input type="password" class="form-control" id="loginPassword" required>
     </div>
-  </section>
-
-  <!-- Why Choose Us Section -->
-  <section id="why-us" class="py-5 py-lg-6 bg-light">
-    <div class="container">
-      <div class="row align-items-center">
-        <div class="col-lg-6 mb-5 mb-lg-0" data-aos="fade-up" data-aos-delay="400">
-          <h2 class="display-5 fw-bold mb-4">Why Choose EstatePro?</h2>
-          <p class="lead text-muted mb-2">
-            We go above and beyond to ensure your real estate experience is seamless and successful.
-          </p>
-
-          <div class="pt-3">
-            <div class="row g-4">
-
-              <!-- Card 1 -->
-              <div class="col-md-6">
-                <div class="card-3d-container">
-                  <div class="card-3d">
-                    <div class="card-front">
-                      <div class="icon">🌎</div>
-                      <h4 class="mb-0">Local Expertise</h4>
-                    </div>
-                    <div class="card-back">
-                      <p class="text-muted mb-0">
-                        Our team has in-depth knowledge of the local real estate market.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Card 2 -->
-              <div class="col-md-6">
-                <div class="card-3d-container">
-                  <div class="card-3d">
-                    <div class="card-front">
-                      <div class="icon">🤝</div>
-                      <h4 class="mb-0">Personalized Service</h4>
-                    </div>
-                    <div class="card-back">
-                      <p class="text-muted mb-0">
-                        We tailor our approach to meet your specific needs and preferences.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Card 3 -->
-              <div class="col-md-6">
-                <div class="card-3d-container">
-                  <div class="card-3d">
-                    <div class="card-front">
-                      <div class="icon">🔍</div>
-                      <h4 class="mb-0">Transparent Process</h4>
-                    </div>
-                    <div class="card-back">
-                      <p class="text-muted mb-0">
-                        No hidden fees or surprises - we keep everything clear and straightforward.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Card 4 -->
-              <div class="col-md-6">
-                <div class="card-3d-container">
-                  <div class="card-3d">
-                    <div class="card-front">
-                      <div class="icon">💪</div>
-                      <h4 class="mb-0">Negotiation Power</h4>
-                    </div>
-                    <div class="card-back">
-                      <p class="text-muted mb-0">
-                        Our experienced agents get you the best possible deal.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-            </div>
-          </div>
-        </div>
-
-        <div class="col-lg-6">
-          <div class="position-relative rounded-3 overflow-hidden  review_card shadow">
-            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" alt="Real estate agent with clients" class="img-fluid w-100">
-            <div class="position-absolute bottom-0 start-0 end-0 p-4 bg-dark bg-gradient">
-              <div class="text-white">
-                <h3 class="h2 mb-3">Our Success Story</h3>
-                <p class="mb-4">Over 1,000 happy clients and counting</p>
-                <div class="d-flex justify-content-between">
-                  <div>
-                    <p class="h2 fw-bold mb-0">15+</p>
-                    <p class="mb-0 text-white-50">Years Experience</p>
-                  </div>
-                  <div>
-                    <p class="h2 fw-bold mb-0">98%</p>
-                    <p class="mb-0 text-white-50">Client Satisfaction</p>
-                  </div>
-                  <div>
-                    <p class="h2 fw-bold mb-0">250+</p>
-                    <p class="mb-0 text-white-50">Properties Sold</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-
-  <!-- Testimonials Section -->
-  <section id="testimonials" class="pt-5 py-lg-6 bg-white">
-    <div class="container">
-      <h2 class="fw-bold text-center" data-aos="fade-up" data-aos-delay="400">Testimonials</h2>
-
-      <div class="row align-items-center">
-
-        <!-- Dynamic Image Section -->
-        <div class="col-lg-5 mb-4 mb-lg-0">
-          <img id="testimonialImage" src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80" alt="Real Estate Property" class="img-fluid rounded-4 shadow" />
-        </div>
-
-        <!-- Testimonial Slider Section -->
-        <div class="col-lg-7">
-          <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
-            <div class="carousel-inner pb-4">
-
-              <!-- Slide 1 -->
-              <div class="carousel-item active" data-image="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80">
-                <div class="bg-white p-4 p-md-5 rounded-4 shadow-sm">
-                  <h5 class="text-primary fw-bold">Dream Home Found!</h5>
-                  <p class="fs-5 fst-italic mb-4">
-                   "From the initial property search to closing the deal, and their support team was always available to answer my questions. Highly recommend their services!"
-                  </p>
-                  <div class="d-flex align-items-center">
-                    <img src="https://randomuser.me/api/portraits/men/31.jpg" alt="Avatar" class="rounded-circle me-3" width="60" height="60">
-                    <div>
-                      <h6 class="mb-0">David Singh</h6>
-                      <small class="text-muted">First-time Homebuyer</small>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Slide 2 -->
-              <div class="carousel-item" data-image="https://images.unsplash.com/photo-1560184897-54c8c8f1d5e0?auto=format&fit=crop&w=800&q=80">
-                <div class="bg-white p-4 p-md-5 rounded-4 shadow-sm">
-                  <h5 class="text-primary fw-bold">Investment Made Easy</h5>
-                  <p class="fs-5 fst-italic mb-4">
-                    “Buying my rental property through RealtyHub was seamless. Their team knew exactly what to look for and handled negotiations like pros.”
-                  </p>
-                  <div class="d-flex align-items-center">
-                    <img src="https://randomuser.me/api/portraits/women/45.jpg" alt="Avatar" class="rounded-circle me-3" width="60" height="60">
-                    <div>
-                      <h6 class="mb-0">Priya Kapoor</h6>
-                      <small class="text-muted">Real Estate Investor</small>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Slide 3 -->
-              <div class="carousel-item" data-image="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=800&q=80">
-                <div class="bg-white p-4 p-md-5 rounded-4 shadow-sm">
-                  <h5 class="text-primary fw-bold">Sold in Days!</h5>
-                  <p class="fs-5 fst-italic mb-4">
-                    “Our home was listed and sold within days,  We couldn't have asked for better results!”
-                  </p>
-                  <div class="d-flex align-items-center">
-                    <img src="https://randomuser.me/api/portraits/men/27.jpg" alt="Avatar" class="rounded-circle me-3" width="60" height="60">
-                    <div>
-                      <h6 class="mb-0">Rohit Mehra</h6>
-                      <small class="text-muted">Home Seller</small>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-
-  </section>
-
-  <!-- Contact Section -->
-  <section id="contact" class="pt-lg-5 contact-section">
-<div class="container my-5">
-  <div class="row">
-    <div class="col-lg-5 mb-4">
-      <h2 class="display-5 fw-bold mb-4">Get In Touch</h2>
-      <p class="common_para">
-        Have questions about buying, selling, or renting? Our team is here to help you with all your real estate needs.
-      </p>
-
-      <div>
-        <div class="d-flex my-lg-4 mb-4">
-          <div class="feature-icon me-4 flex-shrink-0">
-            <i class="fas fa-phone-alt text-primary"></i>
-          </div>
-          <div>
-            <h4 class="mb-1">Call Us</h4>
-            <a href="tel:9990001119" class="text-muted mb-0">9990001119</a>
-          </div>
-        </div>
-
-        <div class="d-flex mb-4">
-          <div class="feature-icon me-4 flex-shrink-0">
-            <i class="fas fa-envelope text-primary"></i>
-          </div>
-          <div>
-            <h4 class="mb-1">Email Us</h4>
-            <a href="mailto:info@gmail.com" class="text-muted mb-0">info@gmail.com</a>
-          </div>
-        </div>
-
-        <div class="d-flex">
-          <div class="feature-icon me-4 flex-shrink-0">
-            <i class="fas fa-map-marker-alt text-primary"></i>
-          </div>
-          <div>
-            <h4 class="h5 mb-1">Visit Us</h4>
-            <p class="text-muted mb-0">123 Connaught Place, Suite 100</p>
-            <p class="text-muted mb-0">New Delhi, Delhi 110001</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="col-lg-7">
-      <div class="bg-white p-sm-4 p-2 p-md-5 rounded-3 shadow-sm">
-        <h3 class="h2 mb-4">Send Us a Message</h3>
-        <form id="contactForm">
-          <div class="row g-3">
-            <div class="col-md-6">
-              <label for="name" class="form-label">Your Name</label>
-              <input type="text" class="form-control form-control-lg" id="name" required>
-            </div>
-            <div class="col-md-6">
-              <label for="email" class="form-label">Email Address</label>
-              <input type="email" class="form-control form-control-lg" id="email" required>
-            </div>
-            <div class="col-12">
-              <label for="phone" class="form-label">Phone Number</label>
-              <input type="tel" class="form-control form-control-lg" id="phone">
-            </div>
-            <div class="col-12">
-              <label for="message" class="form-label">Your Message</label>
-              <textarea style="resize: none;" class="form-control form-control-lg" id="message" rows="4" required></textarea>
-            </div>
-            <div class="col-12">
-              <button type="submit" class="btn btn-primary btn-lg w-100 fw-semibold text-white">Send Message</button>
-            </div>
-          </div>
-        </form>
-      </div>
-    </div>
+<a href="./home.html"><button class="btn btn-primary w-100 fw-semibold text-white">Login</button></a>    
   </div>
 </div>
-  </section>
-  <!-- Footer -->
-  <footer class="pt-5 pb-4 pt-lg-6 bg-dark text-white">
+
+
+  <!-- Signup Form -->
+  <div class="tab-pane fade" id="signupForm" role="tabpanel">
+    <h4 class="text-center mb-3">Sign Up</h4>
+    <form id="signup">
+      <div class="mb-3">
+        <label for="signupName" class="form-label">Name</label>
+        <input type="text" class="form-control" id="signupName" required>
+      </div>
+      <div class="mb-3">
+        <label for="signupEmail" class="form-label">Email</label>
+        <input type="email" class="form-control" id="signupEmail" required>
+      </div>
+      <div class="mb-3">
+        <label for="signupPassword" class="form-label">Password</label>
+        <input type="password" class="form-control" id="signupPassword" required>
+      </div>
+      <button type="submit" class="btn btn-success w-100">Sign Up</button>
+      <div id="signupMsg" class="text-center mt-3"></div>
+    </form>
+  </div>
+</div>
+</div>
+
+<!-- Footer -->
+ <footer class="pt-5 pb-4 pt-lg-6 bg-dark text-white">
     <div class="container">
       <div class="row g-4 g-lg-5">
         <div class="col-lg-4">
@@ -530,18 +199,12 @@
     </div>
   </footer>
 
-  <!-- Bootstrap JS Bundle with Popper -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  <!-- Custom JS -->
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  
+    <script src="./assets/js/index.js"></script>
+    
 
-  <script src="./assets/js/index.js"></script>
-
-  <!-- AOS JS -->
-  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-  <script>
-    AOS.init();
-  </script>
 
 </body>
-
 </html>

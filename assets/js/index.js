@@ -123,36 +123,4 @@ function updateCardTransform() {
 
 
 //=======================accounts code
-  // Sign Up
-  document.getElementById("signup").addEventListener("submit", function(e) {
-    e.preventDefault();
-
-    const name = document.getElementById("signupName").value;
-    const email = document.getElementById("signupEmail").value;
-    const password = document.getElementById("signupPassword").value;
-
-    // Save to localStorage
-    localStorage.setItem("user", JSON.stringify({ name, email, password }));
-
-    document.getElementById("signupMsg").innerHTML = `<span class="text-success">Signup successful! You can now log in.</span>`;
-    this.reset();
-  });
-
-  // Login
-  document.getElementById("login").addEventListener("submit", function(e) {
-    e.preventDefault();
-
-    const email = document.getElementById("loginEmail").value;
-    const password = document.getElementById("loginPassword").value;
-
-    const user = JSON.parse(localStorage.getItem("user"));
-
-    if (user && user.email === email && user.password === password) {
-      document.getElementById("loginMsg").innerHTML = `<span class="text-success">Login successful! Welcome, ${user.name}.</span>`;
-    } else {
-      document.getElementById("loginMsg").innerHTML = `<span class="text-danger">Invalid email or password.</span>`;
-    }
-
-    this.reset();
-  });
-
+  
