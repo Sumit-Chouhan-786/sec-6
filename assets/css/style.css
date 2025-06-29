@@ -107,6 +107,7 @@
 /* ---------------------------------------- */
 header{
     z-index: 10;
+    box-shadow: 0 8px 12px -5px rgba(18, 138, 205, 0.6);
 }
 nav.navbar {
     padding: 0px 15px;
@@ -535,11 +536,6 @@ button.navbar-toggler:focus {
         box-shadow: 0 0 5px #128acd;
       }
     }
-.typing-demo {
-  animation: typing 10s steps(22), blink .5s step-end infinite alternate;
-  overflow: hidden;
-  font-size: 3em;
-}
    .form-container {
       max-width: 400px;
       margin: 50px auto;
@@ -551,16 +547,16 @@ button.navbar-toggler:focus {
       object-fit: cover;
     }
 
-    .common_para{
-      background-color: var(--secondary-color);
-    }
-
-
-@keyframes typing {
-  from {
-    width: 0
-  }
+.footer_link{
+  transition: all 300ms linear;
 }
+
+.footer_link:hover{
+  color: white !important;
+}
+
+
+
     
 @keyframes blink {
   50% {
@@ -595,9 +591,6 @@ button.navbar-toggler:focus {
 
 
  @media (max-width: 576px) {
-        .typing-demo {
-    font-size: 34px !important;
-}
  .carousel-item{
       height: 280px !important;
     
