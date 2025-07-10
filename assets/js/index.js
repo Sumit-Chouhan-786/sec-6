@@ -121,6 +121,4 @@ function updateCardTransform() {
     card.style.transform = transformString;
 }
 
-
-//=======================accounts code
   
